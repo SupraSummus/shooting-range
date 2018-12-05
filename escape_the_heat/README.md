@@ -70,3 +70,14 @@ One more problem: time resolution of env. cost computation. Every transaction ch
 Some resources has difficult to define env. cost. Few examples:
  * water power plant and wind power plant - it's arguable if they are consuming environment resources. They are utilizing them for sure, but not using them up.
  * nuclear power plant - it definetly consumes environment resources (heavy elements fuel and cooling agent - they usually heat up water in nearby lake or sea) and they definetly increase entropy during that. It's hard to compute theoretic env. cost of fuel as, unlike chemical fuels, it can reach very high temperatures. Even if possible to compute, I suppose the env. cost of nuclear fuel is extraordinary large, and cannot be fully utilized (conversion to electricity has relatively low efficiency) thus electricity produced by nuke power plant has too high env. cost. Second, it's arguable if nuclear fuel is usable naturaly in the environment (deuterium in seawater), so taking it away is not really exploitation - thus env. cost should be low.
+
+Using env. cost for effect
+--------------------------
+
+As I proposed earlier, one way is to label products with their env. cost. Customers can then choose consciously. Lebelling may even be voluntary - if customers care, they will choose products that are labelled, and this puts pressure on organisations to label their products.
+
+Env. cost per income can be published in central index. I believe it's not revealing any organisations secrets. If the values can be reverse-enginereed to reveal network of money flow, then random noise can be introduced to prevent that.
+
+Env. cost can be kept secret, and used only as a guideline for central management. For example government can direct organisations of high env. cost to change their operations. This is risky, as it's crucial to compare comapny env. cost with what the company is really doing - for example mines have large env. cost per income, but this is not necesarily bad. It's just specific for what they do. On the other hand some mines can have env. cost too large and can be falsely justified for that.
+
+Env. cost can be used to compute "level of being green" not only for companies, but also for governments, cities, etc. It can be used to compare different investment scenarios. Individuals can can compute their env. cost - for example per month - and/or set their goals for reducing (or increasing - if the are evil) their total env. cost.
