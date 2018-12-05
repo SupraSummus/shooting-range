@@ -43,3 +43,22 @@ Another example: extracting wood. Wood can be used to make furniture with quite 
 Interesting thing that mining iron ore has environmental cost of 0 (or nearly 0). This is beacuse you really cannot do much with just iron ore, Earth's atmosphere and water. You need coal (or other reducing agent) for that, which has it's own env. cost. Because of this recycling iron is better than making new iron from ore - you don't need reducing agent for that, just heat.
 
 What about agriculture? What is the enviornmental cost of growing wheat? Well, it's equal to the cost of preventing native plants from using the sunlight in that area. So, it's equal to disspating sunlight power reaching the area adjusted for native plant's photosynthesis effeciency in given area. (Or something like this. I didn't analyzed it deeply, but I'm sure it can be done.) So, the cost of using the dessert area is small - photosynthesis efficiency there is small. This applies also to solar power plants and using space for anything - factories, roads, etc. It all boils down to the statement that area occipied by native ecosystem is also a resource and we should minimize the use of it.
+
+### Propagating env. cost through production chain
+
+Once we have environmental cost of base resources we can propagate them up to the products made from those resources, and then to the products made from those products and so on. To efficiently do this we need to assume each organisation is a blackbox and flow of environmental cost is connected to the flow of money. Then computing environmental cost of anything can be done using finanacial transaction data (and I believe every developed country has record of it for tax computing purposes).
+
+In other words we compute env. cost per currency unit for every organisation.
+
+So, for example coal mine "produces" coal, which have env. cost of `E`. The coal is then sold to power plant, and the cost of the coal is, let's say, 40% of total mine's income. Thus the electricy produced by the powerplant has env. cost of `0.4*E`. Powerplant sells electricity to 1000 customers at equal prices and in equal quantities. One of the customers is a server space provider, which uses the electricy for powering servers. Let's say it has income of `1000$` (in the considered time range), so buying server for `1$` has env. cost of `(0.4*E) / 1000 / 1000` (it is only the "electricy related" cost).
+
+This approach has the downside of unifying all products of an organisation, but it should depict the fact that some organisations care more about environment than others. Of course you cannot treat environmetal cost of organisation products absolutely, as it is relative metric. Products of heavy industry will always be more costly than services (probably). Env. cost is suitable for comparing cheese A to cheese B on grocery store shelf, but not comparing in-ox rods to psyhotherapist visit.
+
+Another problem is how to compute cycles - for example coal mine produces coal, which is converted to electricity, and some part of the electricity is then used by coal mine. So we have a system of equations:
+
+    coal env cost = electricty env cost * electricy consumed by mine ratio + source env cost of coal mining
+    electricity env cost = coal env cost * coal consumed by power plant ratio
+
+It get's more and more complicated as the cycles gets more complicated, and I suppose they are in modern world. Everything depends on everything. Possible solutions include analytic or iterative solving.
+
+One more problem: time resolution of env. cost computation. Every transaction changes env. cost computation slighly, and it's possible that env. cost have an effect on transactions (because people and organisations care about environment and choose products with small env. cost - ideally). This results in another loop, which this time cannot be solved strictly. We can introduce intervals in which env. cost is computed. Lets say it's computed once per year to adjust to natural energy/entropy cycle. (It'll be hard to cumpute cost of using ground area with smaller time resolution.) This potentially leads to frauds, because it takes one year to propagate bad news to the customers. So organisation has one year to do bad things to the environment before it gets punished by customers.
