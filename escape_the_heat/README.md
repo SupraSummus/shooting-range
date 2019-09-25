@@ -87,3 +87,8 @@ Env. cost per income can be published in a central index. I believe it's not rev
 Env. cost can be kept secret, and used only as a guideline for central management. For example, the government can direct organizations of high env. cost to change their operations. This is risky, as it's crucial to compare company env. cost with what the company is really doing - for example mines have large env. cost per income, but this is not necessarily bad. It's just specific for what they do. On the other hand, some mines can have env. cost too large and can be falsely justified for that.
 
 Env. cost can be used to compute "level of being green" not only for companies but also for governments, cities, etc. It can be used to compare different investment scenarios. Individuals can compute their env. cost - for example per month - and/or set their goals for reducing (or increasing - if they are evil) their total env. cost.
+
+Post scriptum
+=============
+
+Countries doesn't have a record of full financial flow in them. Because of that they won't be able to propagate env. cost up the production chain. Env. const would has to be computed by each company by itself alike it's done with financial data for tax purposes. Instead of accounting just money companies wolud have to account env. const. Country then has to validate summaries provided by companies. It's as much hassle as with taxes ;(
