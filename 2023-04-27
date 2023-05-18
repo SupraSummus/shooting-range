@@ -1,0 +1,45 @@
+Let's discuss goals. I have an "obsession" with large language models (LLMs). I think these models are a very useful tool for working with data encoded in natural language. I want to build something using these models without delving too deep into the arcane details of machine learning. I want to frame the LLMs, give them instructions to perform useful tasks.
+
+I believe LLMs are great for two reasons:
+
+They are automation (scalable, fast, and cheap to run - unlike hiring humans).
+They operate on natural language.
+Operating on natural language is great because it encodes all of human knowledge, and its structure models the structure of the world. It can describe images, music, other people speaking (Polish "mowa zależna"), algorithms, math, and everything humans can express. LLMs have some kind of knowledge of the structure of the world and the structure of ideas encoded in natural language, which makes them great.
+
+I think LLMs can help in intellectual work by providing review. Sometimes this can be as simple as being a more interactive version of a "rubber ducky" - someone to listen and help develop and review ideas. It can also help to organize thinking and force individuals to structure their thinking when describing ideas to others.
+
+Additionally, LLMs can perform tedious work, such as fixing grammar and spelling, making text more readable on a fundamental level before addressing semantics.
+
+The organization of thought is applicable to many areas, and LLMs may be applied to organize the thinking of all team members into a single set of interlinked ideas - a knowledge database. Such a database may have a natural language interface and can be queried for topics of interest. It prevents forgetting previously worked-out solutions and going in circles. To facilitate this, an embedding and vector search mechanism may be necessary because LLMs are poor at searching large datasets. Currently, their short-term memory is much worse than humans. Still, we can store the ideas as records in a database, and each idea is passed through an LLM modified to give embedding.
+
+The core problem with LLMs is that they have a limited working area of text. They can only see a certain number of words at any moment and do not have any other short-term memory. They see a part of the text and reply based solely on this text and their training data, which is beyond our control.
+
+To provide as much useful information in this limited word area as possible, we can fill it with the most recent information. When there is an LLM that is chatting, we will provide it with the history of the conversation, which is quite good, but not perfect.
+
+Another way to improve LLM performance is to have a database of facts, notes, or "chunks of info." Each chunk is a piece of natural text, and we do embedding on it - a transformation to a high-dimensional vector based on the text's content. We store this embedding, and embeddings have a property of being similar for similar content in terms of semantics, not characters. Having a database of text pieces, each with its embedding, we can query the database to find the most similar facts for a given query or currently discussed idea. Then we can feed this relevant information into the LLM.
+
+Of course, embeddings are not magic. They are a tool that can sometimes give wrong results - positive or negative. I hope that in the future, we will have better embedding models, as people are developing mechanisms to make embeddings from text, and we can take what they have worked out.
+
+When embeddings are bad, we can rely somewhat on links between facts, like links on the internet. We begin by searching by embedding, get some results, and then look at linked facts, check facts linked in linked facts, and so on to a certain depth. This may be a little work, but the initial search by embedding vastly limits the scope of it.
+
+There is one more problem with LLMs - they pay attention to what is most recent in the conversation. This may result in losing focus on the goal or big picture, and they can get lost in the details and drift away. To mitigate this, we may periodically remind them of the goal. That is, we paste a fixed text describing the goal into the input.
+
+One time, I tried writing a sci-fi story with the LLM (because I love sci-fi). It went both good and bad. We didn't write the story, which is the bad part. But we developed a solid idea and described it in a short text. I shared it with my friends, and they said it was outstanding and would love to read the complete story.
+
+What stopped me from completing the story? Well, I think I'm just too lazy, and... well, we'll discuss it later.
+
+Now let's talk about ethics.
+
+LLMs are tools. Tools are not inherently ethical or unethical - it is their usage that is ethical or not. The question is, do we want to somehow make LLMs harder to use for unethical purposes? I don't see how that would look without impeding the functionality of an LLM. Restricting usage in areas we think are bad will surely make the LLM more limited. Someone might want to use the LLM for a right cause, but the LLM cannot be used there because our "ethical locks" kick in.
+
+However, LLMs can malfunction in a peculiar way, which may be hard to detect by the user. They can project stereotypes contained in their training set, such as assuming that "a student of engineering" is male. This can, in turn, deepen these stereotypes in society because people will use content provided by LLMs.
+
+The models will get larger, and their input size will grow. I don't have a strong vision there.
+
+However, one topic I think about is the availability of the models. I don't mean the availability of trained models but rather the ability to run them easily. Currently, it is quite challenging to run an instance of an LLM despite all the parameters and architecture being available under an open license. It is hard to run because of compute requirements. To run a large model in reasonable time, you need specialized and expensive hardware. And I don't see hardware growth in the near future that will allow regular people to run the LLM.
+
+However, I think we can optimize the size of LLMs to encode the same functionality in fewer parameters and less compute. This may be an interesting future trend - to optimize.
+
+When everybody can run capable LLMs, all the "ethical locks" implemented by current centralized providers of "LLMs as a service" can be circumvented. People could then ask a lot of "inappropriate" prompts and get answers. It would be interesting to see where that would lead.
+
+LLMs can also "lie," but it is not intentional. It's called a hallucination - LLMs produce output that is well-structured on lower layers like syntax, grammar, and logical cohesion, but it is not based on facts. You should be careful when asking LLMs for knowledge like you would as Google. LLMs are great at text processing and common knowledge, but you should be wary of relying on any specific data relayed by an LLM.
